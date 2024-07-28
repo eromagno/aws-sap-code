@@ -4,7 +4,7 @@
         {
             "Effect": "Allow",
             "Action": "lambda:InvokeFunction",
-            "Resource": "arn:aws:lambda:us-east-1:ACCOUNT_ID:function:productVisitsDatalakeLoadingHandler"
+            "Resource": "arn:aws:lambda:us-east-1:827216809571:function:productVisitsDatalakeLoadingHandler"
         },
         {
             "Effect": "Allow",
@@ -13,7 +13,7 @@
                 "logs:CreateLogStream",
                 "logs:PutLogEvents"
             ],
-            "Resource": "arn:aws:logs:us-east-1:ACCOUNT_ID:*"
+            "Resource": "arn:aws:logs:us-east-1:827216809571:*"
         },
         {
             "Effect": "Allow",
@@ -23,7 +23,7 @@
                 "dynamodb:DescribeStream",
                 "dynamodb:ListStreams"
             ],
-            "Resource": "arn:aws:dynamodb:us-east-1:ACCOUNT_ID:table/ProductVisits/stream/*"
+            "Resource": "arn:aws:dynamodb:us-east-1:827216809571:table/ProductVisits/stream/*"
         },
         {
             "Effect": "Allow",
@@ -31,8 +31,8 @@
                 "s3:*"
             ],
             "Resource": [
-                "arn:aws:s3:::product-visits-datalake",
-                "arn:aws:s3:::product-visits-datalake/*"
+                "arn:aws:s3:::eromagno-product-visits-datalake",
+                "arn:aws:s3:::eromagno-product-visits-datalake/*"
             ]
         }
     ]

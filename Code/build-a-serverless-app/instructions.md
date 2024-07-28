@@ -2,7 +2,7 @@
 
 Region: us-east-1
 
-Note your AWS account ID: *ACCOUNT_ID*
+Note your AWS account ID: *ACCOUNT_ID*  827216809571
 
 1. Create DynamoDB Table:
 	
@@ -14,7 +14,7 @@ Partition key: ProductVisitKey
 Name: ProductVisitsDataQueue
 Type: Standard
 	
-Note the Queue URL: *QUEUE URL*
+Note the Queue URL: *QUEUE URL*  https://sqs.us-east-1.amazonaws.com/827216809571/ProductVisitDataQueue
 
 3. Go to AWS Lambda and create function:
 	
@@ -42,7 +42,7 @@ File location: Code/build-a-serverless-app/part-1
 2. On the "Exports and streams" configuration tab, enable a DynamoDB stream for "New Image"
 3. Create S3 bucket in same region:
 
-Name: product-visits-datalake
+Name: eromagno-product-visits-datalake
 Modify: bucket name by adding letters/numbers at end to be unique
 Region: us-east-1
 
@@ -52,17 +52,17 @@ Name: productVisitsLoadingLambdaPolicy
 JSON: Copy contents of "lambda-policy.json"
 Modify: Replace account number / region / names as required
 
-5. Create a role:
+5. Create a role in IAM:
 
 Use case: Lambda
 Policy: productVisitsLoadingLambdaPolicy
 Name: productVisitsLoadingLambdaRole
 
 6. Unzip "DCTProductVisitsDataLake.zip" 
-7. Edit index.js and update bucket name entry:
+7. Edit index.js and update bucket name entry: -> BUCKET_NAME
 
-Bucket: 'product-visits-datalake'
-Note: Change bucket name to YOUR bucket name
+Bucket: 'eromagno-product-visits-datalake'
+Note: Create ENV variable BUCKET_NAME with bucket name to YOUR bucket name
 
 8. Then zip up contents (don't zip the whole folder) into "DCTProductVisitsDataLake.zip"
 9. Create a function:
