@@ -1,0 +1,16 @@
+{
+  "name": "backendsdkv3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.620.0",
+    "uuid": "^10.0.0"
+  }
+}

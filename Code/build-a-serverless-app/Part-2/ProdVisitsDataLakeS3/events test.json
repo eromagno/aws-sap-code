@@ -1,0 +1,21 @@
+{
+    "Records": [
+        {
+            "messageId": "4b627566-0c4f-4660-a870-4ab412e8604d",
+            "receiptHandle": "AQEBNxcVJKwj734kzN91uTXz9QBZT/+TVH78/tzb+DzG3qlN6ypN59wA3Gb3NSdfpBxvL+FCmuv/1D0JMyvFc0Cj9OlN9J8mmTwaoBqOllSSVtnHalROTMbZA9zH2XKRIcXoK0Fy/4RxZDjxgXsfFujBOV95MWFisOVmimdqG1VlpNNzda5HE5klyLghuN+f+YgItb4FRW7/yXdtqIFpzA+dc+kTvAqA87mZspK5Uwd6Vyopv70cNFM+Ym8ugfU4eDtAL7RUZmPPjNmJXtJjiDC5J6WtgHuN++UrxnMU/YNi+axxKHxYJn5uUpuO4SASHPrMPG0tJp5NHI1sC7jsbWbMZY2HmcMLSmtxB1c8lV9wyVfS96ceuH05VqxaW9ZRfhy0PIgiNgU3shf8MHG1/Srzrw==",
+            "body": "{\"ProductId\":\"c96b49bb-c378-4a15-b2e3-842a9850b23d\",\"ProductName\":\"Kettle Bell\",\"Category\":\"Gym\",\"PricePerUnit\":\"160\",\"CustomerId\":\"be44af0a-74f9-438e-a3ac-e3e21d84259f\",\"CustomerName\":\"Neal Davis\",\"TimeOfVisit\":\"2024-07-30T01:12:24.450Z\"}",
+            "attributes": {
+                "ApproximateReceiveCount": "1",
+                "AWSTraceHeader": "Root=1-66a83e61-624ca45a6615ff567fda781b;Parent=5358ab272814274b;Sampled=0;Lineage=524ec7e6:0",
+                "SentTimestamp": "1722302050012",
+                "SenderId": "AROA4BGPWZZRQ53I2G7KQ:productVisitsSendDataToQueue",
+                "ApproximateFirstReceiveTimestamp": "1722302060012"
+            },
+            "messageAttributes": {},
+            "md5OfBody": "3e4136ccdf5498d6e763d5c9911944cb",
+            "eventSource": "aws:sqs",
+            "eventSourceARN": "arn:aws:sqs:us-east-1:827216809571:ProductVisitDataQueue",
+            "awsRegion": "us-east-1"
+        }
+    ]
+}

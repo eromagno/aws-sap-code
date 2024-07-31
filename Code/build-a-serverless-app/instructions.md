@@ -46,11 +46,11 @@ Name: eromagno-product-visits-datalake
 Modify: bucket name by adding letters/numbers at end to be unique
 Region: us-east-1
 
-4. Go to IAM and create a policy:
+4. Go to IAM and create a policy: 
 
 Name: productVisitsLoadingLambdaPolicy
 JSON: Copy contents of "lambda-policy.json"
-Modify: Replace account number / region / names as required
+Modify: Replace account number 827216809571 / region / names as required
 
 5. Create a role in IAM:
 
@@ -80,7 +80,7 @@ Name: productVisitsDatalakeLoadingHandler
 
 14. Go to AWS CLI and send messages:
 
-AWS CLI Command: `aws sqs send-message --queue-url *QUEUE URL* --message-body file://message-body-1.json`
+AWS CLI Command: `aws sqs send-message --queue-url https://sqs.us-east-1.amazonaws.com/827216809571/ProductVisitDataQueue --message-body file://message-body-1.json`
 Modify: Queue name and file name
 File location: Code/build-a-serverless-app/part-2
 
@@ -89,7 +89,7 @@ File location: Code/build-a-serverless-app/part-2
 1. Create IAM Policy:
 
 JSON: Copy from lambda-policy.json
-Updates: change account number
+Updates: change account number  
 Name: productVisitsSendMessageLambdaPolicy
 
 2. Create an IAM role:
@@ -101,7 +101,7 @@ Name: productVisitsSendMessageLambdaRole
 3. Unzip "DCTProductVisitForm.zip"
 4. Edit index.js for backend and update queue name:
 
-QueueUrl: "*QUEUE URL*"
+QueueUrl: "https://sqs.us-east-1.amazonaws.com/827216809571/ProductVisitDataQueue"
 
 Note: change above URL to YOUR queue URL
 
@@ -109,7 +109,7 @@ Note: change above URL to YOUR queue URL
 6. Create a Lambda function:
 
 Name: productVisitsSendDataToQueue
-Runtime: Node.js 16.x
+Runtime: Node.js 20.x
 Role: productVisitsSendMessageLambdaRole
 	
 7. Upload code: backend.zip
@@ -138,7 +138,7 @@ Function: productVisitsSendDataToQueue
 15. Unzip the file, change into the extract folder, and copy the file contents into the frontent folder
 16. Create a bucket:
 
-Name: product-visits-webform
+Name: eromagno-product-visits-webform
 Updates: Add letters/numbers to bucket name to be unique
 Region: us-east-1
 Turn off block public access
@@ -155,7 +155,7 @@ region: 'us-east-1' // set this to the region you are running in.
 19. Use command line to change to folder containing the frontend directory
 20. Upload contents with AWS CLI command (change bucket name)
 
-`aws s3 sync ./frontend s3://product-visits-webform`
+`aws s3 sync ./frontend s3://eromagno-product-visits-webform`
 
 21. Copy the object URL for index.html
 22. Use URL to access application and then test submitting data using the form

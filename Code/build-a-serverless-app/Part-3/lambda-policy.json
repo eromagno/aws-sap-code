@@ -8,12 +8,12 @@
                 "logs:CreateLogStream",
                 "logs:PutLogEvents"
             ],
-            "Resource": "arn:aws:logs:us-east-1:ACCOUNT_ID:*"
+            "Resource": "arn:aws:logs:us-east-1:827216809571:*"
         },
         {
             "Effect": "Allow",
             "Action": "sqs:SendMessage",
-            "Resource": "arn:aws:sqs:us-east-1:ACCOUNT_ID:ProductVisitsDataQueue"
+            "Resource": "arn:aws:sqs:us-east-1:827216809571:ProductVisitsDataQueue"
         }
     ]
 }
